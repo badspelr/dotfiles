@@ -30,9 +30,10 @@ super + shift + c
 	mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
 super + shift + e
 	tutorialvids
-super + w
-	$TERMINAL -e sudo nmtui
+# swapped brower and nmtui key bindings badspelr
 super + shift + w
+	$TERMINAL -e sudo nmtui
+super + w
 	$BROWSER
 
 # Et cetera...
