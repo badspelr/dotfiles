@@ -19,6 +19,8 @@ bspc desktop -f 1
 # If you want a multi-monitor display or something else, I leave that to you to
 # arrange. I have this sensible default for most people's use cases.
 
+# set cursor
+xsetroot -cursor_name left_ptr &
 
 bspc config border_width 3
 bspc config window_gap 15
@@ -32,3 +34,6 @@ bspc rule -a St:$dropdownname sticky=on
 bspc rule -a St:$dropdownname state=floating
 
 bspc config external_rules_command "$(which floaters)"
+
+# launch polybar
+$HOME/.config/polybar/launch
