@@ -17,4 +17,3 @@ unclutter &		# Remove mouse when idle
 mpd-module-update &	# Check for when to update the mpd module
 sxhkd &			# Simple X hotkey daemon used by bspwm
 notify-send -i ~/.local/share/larbs/larbs.png "Welcome to LARBS" "Press super+F1 for the help menu." # LARBSWELCOME
-notify-send -i ~/.local/share/larbs/larbs.png "Your breath smells like deadfish" # LARBSWELCOME
