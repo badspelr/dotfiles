@@ -209,6 +209,12 @@ super + {Prior,Next}
 super + {Tab,backslash}
 	bspc desktop last --focus
 
+# Cycle through workspaces
+super + Left
+	bspc desktop -f prev.local
+super + Right
+	bspc desktop -f next.local
+
 # focus or swap the next node
 super + {_,shift + }c
 	bspc node -{f,s} next.local
@@ -269,3 +275,4 @@ super + shift + n
 	bspc node focused -t \~floating ; hover right
 super + shift + b
 	bspc node focused -t \~floating ; hover left
+
