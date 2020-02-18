@@ -13,3 +13,5 @@ cfmc	~/.config/ncmpcpp/config
 cfk	~/.config/sxhkd/sxhkdrc
 cfi	~/.config/i3/config
 cfb	~/.config/i3blocks/config
+cfbs	~/.config/bspwm/bspwmrc
+cfs	~/.config/sxhkd/sxhkdrc
