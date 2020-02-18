@@ -63,7 +63,7 @@ font-3 = Symbola:pixelsize=9;1
 ; Other modules: xkeyboard filesystem xbacklight backlight-acpi cpu memory temperature powermenu weather
 modules-left = bspwm xwindow
 ;modules-center =
-modules-right = mpd volume mutt-wizard wlan eth battery date
+modules-right = weather cpu battery mpd volume mutt-wizard wlan eth battery memory date
 
 tray-position = right
 tray-padding = 0
@@ -235,7 +235,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wlp0s16u4:
 interval = 3.0
 
 format-connected = 直 <label-connected>
@@ -322,7 +322,7 @@ bar-volume-empty-foreground = ${colors.gray}
 
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 full-at = 98
 
