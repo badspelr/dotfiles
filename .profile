@@ -5,7 +5,7 @@ export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$
 
 # Get default LARBS WM from ~/.local/share/larbs/wm
 export LARBSWM="$(cat ~/.local/share/larbs/wm 2>/dev/null)" &&
-	[ "$LARBSWM" = "dwm" ] || export LARBSWM="i3"
+	[ "$LARBSWM" = "dwm" ] || export LARBSWM="bspwm" || export LARBSWM="i3"
 
 # Default programs:
 export EDITOR="nvim"
