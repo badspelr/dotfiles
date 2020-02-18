@@ -36,4 +36,4 @@ bspc rule -a St:$dropdownname state=floating
 bspc config external_rules_command "$(which floaters)"
 
 # launch polybar
-$HOME/.config/polybar/launch
+$HOME/.local/bin/launch_polybar
