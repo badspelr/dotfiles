@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# requires pom-perl0
 mnphs=$(pom $1 | grep -o 'New\|Waxing Crescent\|First Quarter\|Waxing Gibbous\|Full\|Waning Gibbous\|Last Quarter\|Waning Crescent' | grep -m1 '.')
 prcnt=$(pom $1 | grep -o '[[:digit:]]*%')
 case "$mnphs" in
