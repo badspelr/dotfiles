@@ -8,8 +8,6 @@ vv="cd ~/Videos && ls -a" \
 cf="cd ~/.config && ls -a" \
 sc="cd ~/.local/bin && ls -a" \
 mn="cd /mnt && ls -a" \
-lsl="lsd -la" \
-lsa="lsd -a" \
 bf="$EDITOR ~/.config/files" \
 bd="$EDITOR ~/.config/directories" \
 bw="$EDITOR ~/.config/bookmarks" \
@@ -27,4 +25,3 @@ cfi="$EDITOR ~/.config/i3/config" \
 cfb="$EDITOR ~/.config/i3blocks/config" \
 cfbs="$EDITOR ~/.config/bspwm/bspwmrc" \
 cfs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
-# end
