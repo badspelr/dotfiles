@@ -44,3 +44,8 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ~/.config/shortcutrc" \
 	weath="less -S ~/.local/share/weatherreport" \
+
+# badspelr
+alias \
+	lsl="lsd -la" \
+	lsa="lsd -a" \
