@@ -27,3 +27,4 @@ cfi="$EDITOR ~/.config/i3/config" \
 cfb="$EDITOR ~/.config/i3blocks/config" \
 cfbs="$EDITOR ~/.config/bspwm/bspwmrc" \
 cfs="$EDITOR ~/.config/sxhkd/sxhkdrc" \
+# end
