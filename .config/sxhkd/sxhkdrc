@@ -8,51 +8,74 @@
 # The b key on the bottom row (hides the bar in either case)
 
 # Basic binds
+# Launch default terminal
 super + Return
 	$TERMINAL
+# Launch dmenu
 super + d
 	dmenu_run
+# Launch default terminal file manager
 super + r
 	$TERMINAL -e $FILE
+# Launch neomutt
 super + e
 	$TERMINAL -e neomutt; pkill -RTMIN+12 $STATUSBAR
+# Launch ncmpcpp
 super + m
 	$TERMINAL -e ncmpcpp
+# Launch newsboat
 super + n
 	$TERMINAL -e newsboat
+# Launch calcurse
 super + c
 	$TERMINAL -e calcurse -D ~/.config/calcurse
+# Launch VimwikiIndex
 super + v
 	$TERMINAL -e nvim -c VimwikiIndex
+# Launch alsamixer
 super + shift + a
 	$TERMINAL -e alsamixer; pkill -RTMIN+10 $STATUSBAR
+# Placeholder
 super + shift + c
 	mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
+# Tutorial videos
 super + shift + e
 	tutorialvids
-# swapped brower and nmtui key bindings badspelr
+# Network configuration
 super + shift + w
 	$TERMINAL -e sudo nmtui
+# Launch browser
 super + w
 	$BROWSER
-
-# Et cetera...
+# Launch emacs
+super + s
+	$EMACS
+## Et cetera...
+# dmenuunicode
 super + grave
 	dmenuunicode
+# Killall
 super + Scroll_Lock
 	killall screenkey || screenkey
+# Show clipboard
 super + Insert
 	showclip
+# Shutdown computer w/ prompt
 super + shift + x
 	prompt "Shutdown computer?" "sudo -A shutdown -h now"
+# Reboot w/ prompt
 super + shift + BackSpace
 	prompt "Reboot computer?" "sudo -A reboot"
+# Leave Xorg
 super + shift + Escape
 	prompt 'Leave Xorg?' 'killall Xorg'
+# Lock screen
 super + x
 	ifinstalled slock && ( slock & xset dpms force off ; mpc pause ; pauseallmpv )
+# xset dpms force off
 XF86Launch1
-	xset dpms force off
+	Energy star off
+# Toggle touchpad
 XF86TouchpadToggle
 	(synclient | grep "TouchpadOff.*1" && synclient TouchpadOff=0) || synclient TouchpadOff=1
 XF86Touchpad{Off,On}
@@ -61,6 +84,22 @@ XF86MonBrightnessDown
 	xbacklight -dec 15
 XF86MonBrightnessUp
 	xbacklight -inc 15
+
+# Add focused window to a tabbed instance in given direction
+super + t; {h,j,k,l}
+	tabc add {west,south,north,east} "$(bspc query -N -n focused)"
+
+# Remove one tab from tabbed
+super + t; r
+	tabbed=$(bspc query -N -n focused); \
+	child=$(tabc list $tabbed | head -n1); \
+	tabc remove $child
+
+##---System Control---#
+# Restart hotkey damon
+super + shift + y
+	killandnotify "sxhkd" "Config reloaded" && sxhkd &
+
 
 # Recording
 # Take screenshot
@@ -101,9 +140,10 @@ super {_,shift +} + minus
 super + shift + m
 	amixer sset Master toggle; pkill -RTMIN+10 $STATUSBAR
 
-# Audiokeys
+# Mute
 XF86AudioMute
 	amixer sset Master toggle; pkill -RTMIN+10 $STATUSBAR
+# Volume control
 XF86Audio{Raise,Lower}Volume
 	amixer sset Master 5%{+,-}; pkill -RTMIN+10 $STATUSBAR
 XF86Audio{Next,Prev}
