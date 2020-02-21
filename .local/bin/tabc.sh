@@ -1,5 +1,8 @@
 #!/bin/sh
 
+
+# Depends on tabbed
+# https://lbry.tv/@BrodieRobertson:5/bspwm-adding-tabbing-into-bspwm-with:9
 # Usage:
 # tabc.sh <command>
 # Commands:
