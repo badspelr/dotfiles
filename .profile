@@ -14,7 +14,7 @@ export BROWSER="brave"
 export READER="zathura"
 export FILE="ranger"
 export STATUSBAR="${LARBSWM}blocks"
-
+export EMACS="emacs-26.3"
 # ~/ Clean-up:
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
