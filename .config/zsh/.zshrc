@@ -7,6 +7,12 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+# Need history
+
+HISTFILE=~/.zhistory
+HISTSIZE=1000
+SAVEHIST=500
+
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -69,3 +75,5 @@ bindkey -s '^o' 'lfcd\n'  # zsh
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+source /home/dniel/.config/broot/launcher/bash/br
